@@ -364,17 +364,6 @@ Wire Wire Line
 Connection ~ 9800 1900
 Wire Wire Line
 	9800 1900 9800 2050
-$Comp
-L power:+5V #PWR0162
-U 1 1 5E433D86
-P 9850 1900
-F 0 "#PWR0162" H 9850 1750 50  0001 C CNN
-F 1 "+5V" V 9865 2028 50  0000 L CNN
-F 2 "" H 9850 1900 50  0001 C CNN
-F 3 "" H 9850 1900 50  0001 C CNN
-	1    9850 1900
-	0    1    1    0   
-$EndComp
 Text GLabel 9050 1700 0    50   Input ~ 0
 CP_TX
 Text GLabel 9050 2050 0    50   Input ~ 0
@@ -475,5 +464,16 @@ F 2 "" H 4900 3150 50  0001 C CNN
 F 3 "" H 4900 3150 50  0001 C CNN
 	1    4900 3150
 	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5VA #PWR?
+U 1 1 5E3724E9
+P 9850 1900
+F 0 "#PWR?" H 9850 1750 50  0001 C CNN
+F 1 "+5VA" V 9865 2028 50  0000 L CNN
+F 2 "" H 9850 1900 50  0001 C CNN
+F 3 "" H 9850 1900 50  0001 C CNN
+	1    9850 1900
+	0    1    1    0   
 $EndComp
 $EndSCHEMATC

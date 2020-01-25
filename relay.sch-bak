@@ -1,0 +1,387 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 8
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Isolator:4N25 U2
+U 1 1 5E213E49
+P 4300 3550
+F 0 "U2" H 4300 3875 50  0000 C CNN
+F 1 "4N25" H 4300 3784 50  0000 C CNN
+F 2 "Package_DIP:DIP-6_W7.62mm" H 4100 3350 50  0001 L CIN
+F 3 "https://www.vishay.com/docs/83725/4n25.pdf" H 4300 3550 50  0001 L CNN
+F 4 "http://www.orbitel.co.rs/sr/proizvod/434684/4n35#.Xh8yVjMo_Ho" H 4300 3550 50  0001 C CNN "Orbit"
+	1    4300 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_Array:ULN2003A U4
+U 1 1 5E215038
+P 5650 3850
+F 0 "U4" H 5650 4517 50  0000 C CNN
+F 1 "ULN2003A" H 5650 4426 50  0000 C CNN
+F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 5700 3300 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/uln2003a.pdf" H 5750 3650 50  0001 C CNN
+	1    5650 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0120
+U 1 1 5E2162F0
+P 6100 3050
+F 0 "#PWR0120" H 6100 2900 50  0001 C CNN
+F 1 "+5V" H 6115 3223 50  0000 C CNN
+F 2 "" H 6100 3050 50  0001 C CNN
+F 3 "" H 6100 3050 50  0001 C CNN
+	1    6100 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 3450 6100 3450
+$Comp
+L power:GND #PWR0121
+U 1 1 5E216AE9
+P 5650 4500
+F 0 "#PWR0121" H 5650 4250 50  0001 C CNN
+F 1 "GND" H 5655 4327 50  0000 C CNN
+F 2 "" H 5650 4500 50  0001 C CNN
+F 3 "" H 5650 4500 50  0001 C CNN
+	1    5650 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 4450 5650 4500
+Wire Wire Line
+	6050 3650 6100 3650
+Wire Wire Line
+	6100 3650 6100 3750
+Wire Wire Line
+	6100 3850 6050 3850
+Wire Wire Line
+	6050 3750 6100 3750
+Connection ~ 6100 3750
+Wire Wire Line
+	6100 3750 6100 3850
+Wire Wire Line
+	6050 3950 6100 3950
+Wire Wire Line
+	6100 3950 6100 4050
+Wire Wire Line
+	6100 4150 6050 4150
+Wire Wire Line
+	6050 4050 6100 4050
+Connection ~ 6100 4050
+Wire Wire Line
+	6100 4050 6100 4150
+Wire Wire Line
+	5250 3650 5200 3650
+Wire Wire Line
+	5200 3650 5200 3750
+Wire Wire Line
+	5200 3850 5250 3850
+Wire Wire Line
+	5250 3750 5200 3750
+Connection ~ 5200 3750
+Wire Wire Line
+	5250 3950 5200 3950
+Wire Wire Line
+	5200 3950 5200 4050
+Wire Wire Line
+	5200 4150 5250 4150
+Wire Wire Line
+	5250 4050 5200 4050
+Connection ~ 5200 4050
+Wire Wire Line
+	5200 4050 5200 4150
+$Comp
+L power:+5V #PWR0122
+U 1 1 5E21912A
+P 4700 3400
+F 0 "#PWR0122" H 4700 3250 50  0001 C CNN
+F 1 "+5V" H 4715 3573 50  0000 C CNN
+F 2 "" H 4700 3400 50  0001 C CNN
+F 3 "" H 4700 3400 50  0001 C CNN
+	1    4700 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 3550 4700 3550
+Wire Wire Line
+	4700 3550 4700 3400
+NoConn ~ 4600 3450
+Wire Wire Line
+	5200 3750 5200 3850
+$Comp
+L Device:R R8
+U 1 1 5E21FD4D
+P 4850 3650
+F 0 "R8" V 4643 3650 50  0000 C CNN
+F 1 "0" V 4734 3650 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" V 4780 3650 50  0001 C CNN
+F 3 "~" H 4850 3650 50  0001 C CNN
+	1    4850 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4600 3650 4700 3650
+$Comp
+L Device:R R6
+U 1 1 5E2211DC
+P 3800 3450
+F 0 "R6" V 3593 3450 50  0000 C CNN
+F 1 "330" V 3684 3450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3730 3450 50  0001 C CNN
+F 3 "~" H 3800 3450 50  0001 C CNN
+	1    3800 3450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3950 3450 4000 3450
+Wire Wire Line
+	3650 3450 3600 3450
+Text HLabel 3600 3450 0    50   Input ~ 0
+RELAY_1
+$Comp
+L power:GND #PWR0123
+U 1 1 5E222AF2
+P 3650 3650
+F 0 "#PWR0123" H 3650 3400 50  0001 C CNN
+F 1 "GND" V 3655 3522 50  0000 R CNN
+F 2 "" H 3650 3650 50  0001 C CNN
+F 3 "" H 3650 3650 50  0001 C CNN
+	1    3650 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4000 3650 3650 3650
+$Comp
+L Isolator:4N25 U3
+U 1 1 5E22425E
+P 4300 4100
+F 0 "U3" H 4300 4425 50  0000 C CNN
+F 1 "4N25" H 4300 4334 50  0000 C CNN
+F 2 "Package_DIP:DIP-6_W7.62mm" H 4100 3900 50  0001 L CIN
+F 3 "https://www.vishay.com/docs/83725/4n25.pdf" H 4300 4100 50  0001 L CNN
+F 4 "http://www.orbitel.co.rs/sr/proizvod/434684/4n35#.Xh8yVjMo_Ho" H 4300 4100 50  0001 C CNN "Orbit"
+	1    4300 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0124
+U 1 1 5E224268
+P 4700 3950
+F 0 "#PWR0124" H 4700 3800 50  0001 C CNN
+F 1 "+5V" H 4715 4123 50  0000 C CNN
+F 2 "" H 4700 3950 50  0001 C CNN
+F 3 "" H 4700 3950 50  0001 C CNN
+	1    4700 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 4100 4700 4100
+Wire Wire Line
+	4700 4100 4700 3950
+NoConn ~ 4600 4000
+$Comp
+L Device:R R9
+U 1 1 5E224275
+P 4850 4200
+F 0 "R9" V 4643 4200 50  0000 C CNN
+F 1 "0" V 4734 4200 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" V 4780 4200 50  0001 C CNN
+F 3 "~" H 4850 4200 50  0001 C CNN
+	1    4850 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4600 4200 4700 4200
+$Comp
+L Device:R R7
+U 1 1 5E224280
+P 3800 4000
+F 0 "R7" V 3593 4000 50  0000 C CNN
+F 1 "330" V 3684 4000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3730 4000 50  0001 C CNN
+F 3 "~" H 3800 4000 50  0001 C CNN
+	1    3800 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3950 4000 4000 4000
+Wire Wire Line
+	3650 4000 3600 4000
+Text HLabel 3600 4000 0    50   Input ~ 0
+RELAY_2
+$Comp
+L power:GND #PWR0125
+U 1 1 5E22428D
+P 3650 4200
+F 0 "#PWR0125" H 3650 3950 50  0001 C CNN
+F 1 "GND" V 3655 4072 50  0000 R CNN
+F 2 "" H 3650 4200 50  0001 C CNN
+F 3 "" H 3650 4200 50  0001 C CNN
+	1    3650 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4000 4200 3650 4200
+Wire Wire Line
+	5000 4200 5050 4200
+Wire Wire Line
+	5050 4200 5050 4050
+Wire Wire Line
+	5050 4050 5200 4050
+Wire Wire Line
+	5200 3750 5050 3750
+Wire Wire Line
+	5050 3750 5050 3650
+Wire Wire Line
+	5050 3650 5000 3650
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5E230259
+P 6100 4300
+F 0 "TP2" H 6042 4326 50  0000 R CNN
+F 1 "TestPoint" H 6042 4417 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 6300 4300 50  0001 C CNN
+F 3 "~" H 6300 4300 50  0001 C CNN
+	1    6100 4300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5E2306B9
+P 5200 4300
+F 0 "TP1" H 5400 4300 50  0000 R CNN
+F 1 "TestPoint" H 5600 4400 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 5400 4300 50  0001 C CNN
+F 3 "~" H 5400 4300 50  0001 C CNN
+	1    5200 4300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6050 4250 6100 4250
+Wire Wire Line
+	6100 4250 6100 4300
+Wire Wire Line
+	5200 4300 5200 4250
+Wire Wire Line
+	5200 4250 5250 4250
+$Comp
+L New_Library:AZ943 U6
+U 1 1 5E20F855
+P 6900 3400
+F 0 "U6" H 6975 4015 50  0000 C CNN
+F 1 "AZ943" H 6975 3924 50  0000 C CNN
+F 2 "burner:AZ943" H 6750 3250 50  0001 C CNN
+F 3 "https://www.azettler.com/pdfs/az943.pdf" H 6900 3400 50  0001 C CNN
+F 4 "http://www.orbitel.co.rs/sr/proizvod/R69908/rele-5vdc-10a-az#.XiDCqzMo_Hr" H 6900 3400 50  0001 C CNN "Orbit"
+	1    6900 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0126
+U 1 1 5E217500
+P 6300 3050
+F 0 "#PWR0126" H 6300 2900 50  0001 C CNN
+F 1 "+5V" H 6315 3223 50  0000 C CNN
+F 2 "" H 6300 3050 50  0001 C CNN
+F 3 "" H 6300 3050 50  0001 C CNN
+	1    6300 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 3750 6500 3750
+Wire Wire Line
+	6500 3750 6500 3350
+Wire Wire Line
+	6500 3350 6550 3350
+Wire Wire Line
+	6300 3050 6300 3200
+Wire Wire Line
+	6300 3200 6550 3200
+Wire Wire Line
+	6100 3050 6100 3450
+Wire Wire Line
+	6500 4300 6150 4300
+Wire Wire Line
+	6150 4300 6150 4050
+Wire Wire Line
+	6150 4050 6100 4050
+Wire Wire Line
+	6300 3200 6300 4150
+Wire Wire Line
+	6300 4150 6500 4150
+Connection ~ 6300 3200
+NoConn ~ 7400 3400
+NoConn ~ 7350 4350
+$Comp
+L Connector:Screw_Terminal_01x02 J5
+U 1 1 5E22D443
+P 7850 3250
+F 0 "J5" H 7930 3242 50  0000 L CNN
+F 1 "BURNER1" H 7930 3151 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 7850 3250 50  0001 C CNN
+F 3 "~" H 7850 3250 50  0001 C CNN
+	1    7850 3250
+	1    0    0    -1  
+$EndComp
+Text HLabel 7550 3100 2    50   Input ~ 0
+220V_L
+Text HLabel 7550 3400 3    50   Input ~ 0
+220V_N
+Wire Wire Line
+	7400 3100 7550 3100
+Wire Wire Line
+	7400 3250 7650 3250
+Wire Wire Line
+	7550 3400 7550 3350
+Wire Wire Line
+	7550 3350 7650 3350
+$Comp
+L Connector:Screw_Terminal_01x02 J4
+U 1 1 5E24A25A
+P 7800 4200
+F 0 "J4" H 7880 4192 50  0000 L CNN
+F 1 "BURNER2" H 7880 4101 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 7800 4200 50  0001 C CNN
+F 3 "~" H 7800 4200 50  0001 C CNN
+	1    7800 4200
+	1    0    0    -1  
+$EndComp
+Text HLabel 7550 4050 2    50   Input ~ 0
+220V_L
+Text HLabel 7500 4350 3    50   Input ~ 0
+220V_N
+Wire Wire Line
+	7350 4200 7600 4200
+Wire Wire Line
+	7500 4350 7500 4300
+Wire Wire Line
+	7500 4300 7600 4300
+Wire Wire Line
+	7350 4050 7550 4050
+$Comp
+L New_Library:AZ943 U5
+U 1 1 5E25DFBE
+P 6850 4350
+F 0 "U5" H 6925 4965 50  0000 C CNN
+F 1 "AZ943" H 6925 4874 50  0000 C CNN
+F 2 "burner:AZ943" H 6700 4200 50  0001 C CNN
+F 3 "https://www.azettler.com/pdfs/az943.pdf" H 6850 4350 50  0001 C CNN
+F 4 "http://www.orbitel.co.rs/sr/proizvod/R69908/rele-5vdc-10a-az#.XiDCqzMo_Hr" H 6850 4350 50  0001 C CNN "Orbit"
+	1    6850 4350
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

@@ -1,0 +1,255 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 8
+Title "Power section"
+Date "2020-01-15"
+Rev "1.0"
+Comp "SENSA"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Screw_Terminal_01x02 J3
+U 1 1 5E1F2FBE
+P 3650 3750
+F 0 "J3" H 3600 3850 50  0000 L CNN
+F 1 "5V_INPUT" V 3750 3500 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 3650 3750 50  0001 C CNN
+F 3 "~" H 3650 3750 50  0001 C CNN
+	1    3650 3750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J2
+U 1 1 5E1FE753
+P 3650 3150
+F 0 "J2" H 3600 3250 50  0000 L CNN
+F 1 "220V_INPUT" V 3750 2900 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 3650 3150 50  0001 C CNN
+F 3 "~" H 3650 3150 50  0001 C CNN
+	1    3650 3150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:Fuse F1
+U 1 1 5E1FF3C5
+P 4050 3050
+F 0 "F1" V 3853 3050 50  0000 C CNN
+F 1 "Fuse" V 3944 3050 50  0000 C CNN
+F 2 "Fuse:Fuseholder_TR5_Littelfuse_No560_No460" V 3980 3050 50  0001 C CNN
+F 3 "~" H 4050 3050 50  0001 C CNN
+	1    4050 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4200 3050 4250 3050
+Wire Wire Line
+	3850 3050 3900 3050
+Wire Wire Line
+	3850 3150 4250 3150
+Text HLabel 4250 3050 2    50   Input ~ 0
+AC_L
+Text HLabel 4250 3150 2    50   Input ~ 0
+AC_N
+Text Notes 3800 2800 0    50   ~ 0
+choose fuse!
+$Comp
+L power:GND #PWR0116
+U 1 1 5E202793
+P 3900 4000
+F 0 "#PWR0116" H 3900 3750 50  0001 C CNN
+F 1 "GND" H 3905 3827 50  0000 C CNN
+F 2 "" H 3900 4000 50  0001 C CNN
+F 3 "" H 3900 4000 50  0001 C CNN
+	1    3900 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 3750 3900 3750
+Text HLabel 4700 3650 2    50   Input ~ 0
+5V_INPUT
+Wire Wire Line
+	3850 3650 3900 3650
+$Comp
+L Device:LED D2
+U 1 1 5E203A84
+P 8250 3350
+F 0 "D2" V 8289 3233 50  0000 R CNN
+F 1 "LED" V 8198 3233 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 8250 3350 50  0001 C CNN
+F 3 "~" H 8250 3350 50  0001 C CNN
+	1    8250 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5E203E8F
+P 8250 3700
+F 0 "R5" H 8320 3746 50  0000 L CNN
+F 1 "1k" H 8320 3655 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8180 3700 50  0001 C CNN
+F 3 "~" H 8250 3700 50  0001 C CNN
+	1    8250 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 3500 8250 3550
+Wire Wire Line
+	8250 3850 8250 3900
+Wire Wire Line
+	8250 3200 8250 3150
+Text HLabel 8250 3150 1    50   Input ~ 0
+5V_INPUT
+$Comp
+L power:GND #PWR0117
+U 1 1 5E2048D9
+P 8250 3900
+F 0 "#PWR0117" H 8250 3650 50  0001 C CNN
+F 1 "GND" H 8255 3727 50  0000 C CNN
+F 2 "" H 8250 3900 50  0001 C CNN
+F 3 "" H 8250 3900 50  0001 C CNN
+	1    8250 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse F2
+U 1 1 5E206B0C
+P 4050 3650
+F 0 "F2" V 3853 3650 50  0000 C CNN
+F 1 "Fuse" V 3944 3650 50  0000 C CNN
+F 2 "Fuse:Fuse_0805_2012Metric" V 3980 3650 50  0001 C CNN
+F 3 "~" H 4050 3650 50  0001 C CNN
+	1    4050 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4200 3650 4250 3650
+Text HLabel 6750 3150 1    50   Input ~ 0
+5V_INPUT
+$Comp
+L Device:C C10
+U 1 1 5E2096C3
+P 6750 3400
+F 0 "C10" V 6700 3450 50  0000 L CNN
+F 1 "100nF" V 6700 3100 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6788 3250 50  0001 C CNN
+F 3 "~" H 6750 3400 50  0001 C CNN
+	1    6750 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C11
+U 1 1 5E20A744
+P 6950 3400
+F 0 "C11" V 6900 3450 50  0000 L CNN
+F 1 "1uF" V 6900 3100 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6988 3250 50  0001 C CNN
+F 3 "~" H 6950 3400 50  0001 C CNN
+	1    6950 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C12
+U 1 1 5E20A979
+P 7150 3400
+F 0 "C12" V 7100 3450 50  0000 L CNN
+F 1 "10uF" V 7100 3100 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7188 3250 50  0001 C CNN
+F 3 "~" H 7150 3400 50  0001 C CNN
+	1    7150 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C13
+U 1 1 5E20B0DB
+P 7350 3400
+F 0 "C13" V 7400 3450 50  0000 L CNN
+F 1 "100uF" V 7300 3100 50  0000 L CNN
+F 2 "Capacitor_SMD:C_Elec_6.3x5.4" H 7388 3250 50  0001 C CNN
+F 3 "~" H 7350 3400 50  0001 C CNN
+	1    7350 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0118
+U 1 1 5E20C741
+P 6750 3800
+F 0 "#PWR0118" H 6750 3550 50  0001 C CNN
+F 1 "GND" H 6755 3627 50  0000 C CNN
+F 2 "" H 6750 3800 50  0001 C CNN
+F 3 "" H 6750 3800 50  0001 C CNN
+	1    6750 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 3150 6750 3200
+Wire Wire Line
+	6750 3200 6950 3200
+Wire Wire Line
+	7350 3200 7350 3250
+Connection ~ 6750 3200
+Wire Wire Line
+	6750 3200 6750 3250
+Wire Wire Line
+	7150 3250 7150 3200
+Connection ~ 7150 3200
+Wire Wire Line
+	7150 3200 7350 3200
+Wire Wire Line
+	6950 3250 6950 3200
+Connection ~ 6950 3200
+Wire Wire Line
+	6950 3200 7150 3200
+Wire Wire Line
+	6750 3550 6750 3750
+Wire Wire Line
+	6950 3550 6950 3750
+Wire Wire Line
+	6950 3750 6750 3750
+Connection ~ 6750 3750
+Wire Wire Line
+	6750 3750 6750 3800
+Wire Wire Line
+	7150 3550 7150 3750
+Wire Wire Line
+	7150 3750 6950 3750
+Connection ~ 6950 3750
+Wire Wire Line
+	7350 3550 7350 3750
+Wire Wire Line
+	7350 3750 7150 3750
+Connection ~ 7150 3750
+$Comp
+L Transistor_FET:BS250 Q1
+U 1 1 5E2B389E
+P 4450 3750
+F 0 "Q1" V 4792 3750 50  0000 C CNN
+F 1 "AOD417" V 4701 3750 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-252-2" H 4650 3675 50  0001 L CIN
+F 3 "http://aosmd.com/res/data_sheets/AOD417.pdf" H 4450 3750 50  0001 L CNN
+	1    4450 3750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0119
+U 1 1 5E2B77DE
+P 4450 4000
+F 0 "#PWR0119" H 4450 3750 50  0001 C CNN
+F 1 "GND" H 4455 3827 50  0000 C CNN
+F 2 "" H 4450 4000 50  0001 C CNN
+F 3 "" H 4450 4000 50  0001 C CNN
+	1    4450 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 3750 3900 4000
+Wire Wire Line
+	4450 3950 4450 4000
+Wire Wire Line
+	4650 3650 4700 3650
+$EndSCHEMATC

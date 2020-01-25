@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name burner)(type KiCad)(uri ${KIPRJMOD}/Lib/burner.pretty)(options "")(descr ""))
+)

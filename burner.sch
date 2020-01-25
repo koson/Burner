@@ -1,0 +1,298 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 8
+Title "Burner"
+Date "2020-01-15"
+Rev "1.0"
+Comp "SENSA"
+Comment1 "Developed at SENSA by Silard Gal"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 5250 2650 1250 1900
+U 5E1F2E2E
+F0 "controller" 50
+F1 "controller.sch" 50
+F2 "MCU_SCL" I L 5250 4250 50 
+F3 "MCU_SDA" I L 5250 4150 50 
+F4 "MCU_RXD0" I L 5250 4050 50 
+F5 "MCU_TXD0" I L 5250 3950 50 
+F6 "MCU_INT2" I R 6500 3750 50 
+F7 "MCU_INT3" I R 6500 3650 50 
+F8 "MCU_INT4" I R 6500 3550 50 
+F9 "DISP_RS" I L 5250 3800 50 
+F10 "DISP_RW" I L 5250 3700 50 
+F11 "DISP_EN" I L 5250 3600 50 
+F12 "DISP_D4" I L 5250 3500 50 
+F13 "DISP_D5" I L 5250 3400 50 
+F14 "DISP_D6" I L 5250 3300 50 
+F15 "DISP_D7" I L 5250 3200 50 
+F16 "TEMP_SO" I L 5250 3050 50 
+F17 "TEMP_SCK" I L 5250 2950 50 
+F18 "TEMP_CS1" I L 5250 2850 50 
+F19 "TEMP_CS2" I L 5250 2750 50 
+F20 "RELAY_1" I R 6500 3300 50 
+F21 "RELAY_2" I R 6500 3400 50 
+F22 "MCU_DTR" I L 5250 4350 50 
+$EndSheet
+$Sheet
+S 8600 1300 900  600 
+U 5E1F2E54
+F0 "Power" 50
+F1 "power.sch" 50
+F2 "AC_L" I L 8600 1400 50 
+F3 "AC_N" I L 8600 1500 50 
+F4 "5V_INPUT" I L 8600 1700 50 
+$EndSheet
+$Comp
+L power:+5V #PWR0101
+U 1 1 5E208683
+P 8550 1700
+F 0 "#PWR0101" H 8550 1550 50  0001 C CNN
+F 1 "+5V" V 8565 1828 50  0000 L CNN
+F 2 "" H 8550 1700 50  0001 C CNN
+F 3 "" H 8550 1700 50  0001 C CNN
+	1    8550 1700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8550 1700 8600 1700
+$Sheet
+S 8650 2950 800  950 
+U 5E213CEA
+F0 "Relay" 50
+F1 "relay.sch" 50
+F2 "RELAY_1" I L 8650 3550 50 
+F3 "RELAY_2" I L 8650 3650 50 
+F4 "220V_L" I L 8650 3200 50 
+F5 "220V_N" I L 8650 3100 50 
+$EndSheet
+Wire Wire Line
+	8650 3100 8150 3100
+Wire Wire Line
+	8150 3100 8150 1500
+Wire Wire Line
+	8150 1500 8600 1500
+Wire Wire Line
+	8600 1400 8050 1400
+Wire Wire Line
+	8050 1400 8050 3200
+Wire Wire Line
+	8050 3200 8650 3200
+$Sheet
+S 3800 5050 1200 950 
+U 5E26832D
+F0 "Display" 50
+F1 "display.sch" 50
+F2 "1604_RS" I L 3800 5200 50 
+F3 "1604_RW" I L 3800 5300 50 
+F4 "1604_EN" I L 3800 5400 50 
+F5 "1604_D4" I L 3800 5500 50 
+F6 "1604_D5" I L 3800 5600 50 
+F7 "1604_D6" I L 3800 5700 50 
+F8 "1604_D7" I L 3800 5800 50 
+F9 "I2C_SDA" I R 5000 5200 50 
+F10 "I2C_SCL" I R 5000 5300 50 
+F11 "ENC_A" I R 5000 5550 50 
+F12 "ENC_B" I R 5000 5650 50 
+F13 "ENC_SEL" I R 5000 5750 50 
+$EndSheet
+$Sheet
+S 2150 3050 650  700 
+U 5E268372
+F0 "Temperature" 50
+F1 "temp.sch" 50
+F2 "MAX_SCK" I R 2800 3150 50 
+F3 "MAX_CS1" I R 2800 3650 50 
+F4 "MAX_SO" I R 2800 3250 50 
+F5 "MAX_CS2" I R 2800 3550 50 
+$EndSheet
+Text GLabel 3750 5200 0    50   Input ~ 0
+DISP_1604_RS
+Text GLabel 3750 5300 0    50   Input ~ 0
+DISP_1604_RW
+Text GLabel 3750 5400 0    50   Input ~ 0
+DISP_1604_EN
+Text GLabel 3750 5500 0    50   Input ~ 0
+DISP_1604_D4
+Text GLabel 3750 5600 0    50   Input ~ 0
+DISP_1604_D5
+Text GLabel 3750 5700 0    50   Input ~ 0
+DISP_1604_D6
+Text GLabel 3750 5800 0    50   Input ~ 0
+DISP_1604_D7
+Text GLabel 5050 5200 2    50   Input ~ 0
+MCU_SDA
+Text GLabel 5050 5300 2    50   Input ~ 0
+MCU_SCL
+Text GLabel 5050 5550 2    50   Input ~ 0
+DISP_ENC_A
+Text GLabel 5050 5650 2    50   Input ~ 0
+DISP_ENC_B
+Text GLabel 5050 5750 2    50   Input ~ 0
+DISP_ENC_SEL
+Wire Wire Line
+	3750 5200 3800 5200
+Wire Wire Line
+	3750 5300 3800 5300
+Wire Wire Line
+	3750 5400 3800 5400
+Wire Wire Line
+	3750 5500 3800 5500
+Wire Wire Line
+	3750 5600 3800 5600
+Wire Wire Line
+	3750 5700 3800 5700
+Wire Wire Line
+	3750 5800 3800 5800
+Wire Wire Line
+	5000 5200 5050 5200
+Wire Wire Line
+	5000 5300 5050 5300
+Wire Wire Line
+	5000 5550 5050 5550
+Wire Wire Line
+	5000 5650 5050 5650
+Wire Wire Line
+	5000 5750 5050 5750
+Text GLabel 2850 3150 2    50   Input ~ 0
+TEMP_MAX_SCK
+Text GLabel 2850 3250 2    50   Input ~ 0
+TEMP_MAX_SO
+Text GLabel 2850 3550 2    50   Input ~ 0
+TEMP_MAX_CS2
+Text GLabel 2850 3650 2    50   Input ~ 0
+TEMP_MAX_CS1
+Wire Wire Line
+	2800 3150 2850 3150
+Wire Wire Line
+	2800 3250 2850 3250
+Wire Wire Line
+	2800 3550 2850 3550
+Wire Wire Line
+	2800 3650 2850 3650
+$Sheet
+S 6900 4900 550  550 
+U 5E2C4D23
+F0 "USB" 50
+F1 "USB.sch" 50
+F2 "TX" I L 6900 5050 50 
+F3 "RX" I L 6900 5150 50 
+F4 "DTR" I L 6900 5250 50 
+$EndSheet
+Text GLabel 5200 3800 0    50   Input ~ 0
+DISP_1604_RS
+Text GLabel 5200 3700 0    50   Input ~ 0
+DISP_1604_RW
+Text GLabel 5200 3600 0    50   Input ~ 0
+DISP_1604_EN
+Text GLabel 5200 3500 0    50   Input ~ 0
+DISP_1604_D4
+Text GLabel 5200 3400 0    50   Input ~ 0
+DISP_1604_D5
+Text GLabel 5200 3300 0    50   Input ~ 0
+DISP_1604_D6
+Text GLabel 5200 3200 0    50   Input ~ 0
+DISP_1604_D7
+Text GLabel 5200 4150 0    50   Input ~ 0
+MCU_SDA
+Text GLabel 5200 4250 0    50   Input ~ 0
+MCU_SCL
+Text GLabel 6550 3750 2    50   Input ~ 0
+DISP_ENC_A
+Text GLabel 6550 3650 2    50   Input ~ 0
+DISP_ENC_B
+Text GLabel 6550 3550 2    50   Input ~ 0
+DISP_ENC_SEL
+Wire Wire Line
+	6500 3550 6550 3550
+Wire Wire Line
+	6500 3650 6550 3650
+Wire Wire Line
+	6500 3750 6550 3750
+Text GLabel 6550 3300 2    50   Input ~ 0
+RELAY_1
+Text GLabel 6550 3400 2    50   Input ~ 0
+RELAY_2
+Text GLabel 8600 3550 0    50   Input ~ 0
+RELAY_1
+Text GLabel 8600 3650 0    50   Input ~ 0
+RELAY_2
+Wire Wire Line
+	8600 3550 8650 3550
+Wire Wire Line
+	8600 3650 8650 3650
+Text GLabel 5200 2950 0    50   Input ~ 0
+TEMP_MAX_SCK
+Text GLabel 5200 3050 0    50   Input ~ 0
+TEMP_MAX_SO
+Text GLabel 5200 2750 0    50   Input ~ 0
+TEMP_MAX_CS2
+Text GLabel 5200 2850 0    50   Input ~ 0
+TEMP_MAX_CS1
+Wire Wire Line
+	5200 3050 5250 3050
+Wire Wire Line
+	5200 2950 5250 2950
+Wire Wire Line
+	5200 2850 5250 2850
+Wire Wire Line
+	5200 2750 5250 2750
+Wire Wire Line
+	5200 3200 5250 3200
+Wire Wire Line
+	5200 3300 5250 3300
+Wire Wire Line
+	5200 3400 5250 3400
+Wire Wire Line
+	5200 3500 5250 3500
+Wire Wire Line
+	5200 3700 5250 3700
+Wire Wire Line
+	5200 3600 5250 3600
+Wire Wire Line
+	5200 3800 5250 3800
+Wire Wire Line
+	5200 4150 5250 4150
+Wire Wire Line
+	5200 4250 5250 4250
+Wire Wire Line
+	6500 3300 6550 3300
+Wire Wire Line
+	6500 3400 6550 3400
+$Sheet
+S 5600 1250 750  650 
+U 5E3ADA90
+F0 "Misc" 50
+F1 "Misc.sch" 50
+$EndSheet
+Text GLabel 5200 3950 0    50   Input ~ 0
+MCU_TX
+Text GLabel 5200 4050 0    50   Input ~ 0
+MCU_RX
+Wire Wire Line
+	5200 3950 5250 3950
+Wire Wire Line
+	5200 4050 5250 4050
+Text GLabel 6850 5050 0    50   Input ~ 0
+MCU_TX
+Text GLabel 6850 5150 0    50   Input ~ 0
+MCU_RX
+Text GLabel 5200 4350 0    50   Input ~ 0
+MCU_DTR
+Wire Wire Line
+	5200 4350 5250 4350
+Text GLabel 6850 5250 0    50   Input ~ 0
+MCU_DTR
+Wire Wire Line
+	6850 5050 6900 5050
+Wire Wire Line
+	6850 5150 6900 5150
+Wire Wire Line
+	6850 5250 6900 5250
+$EndSCHEMATC

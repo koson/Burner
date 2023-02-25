@@ -1,5 +1,6 @@
 (sym_lib_table
-  (lib (name New_Library)(type Legacy)(uri ${KIPRJMOD}/Lib/New_Library.lib)(options "")(descr ""))
-  (lib (name MAX6675)(type Legacy)(uri ${KIPRJMOD}/Lib/Lib/MAX6675.lib)(options "")(descr ""))
-  (lib (name CP2102-GM)(type Legacy)(uri ${KIPRJMOD}/Lib/Lib/CP2102-GM.lib)(options "")(descr ""))
+  (lib (name "New_Library")(type "Legacy")(uri "${KIPRJMOD}/Lib/New_Library.lib")(options "")(descr ""))
+  (lib (name "MAX6675")(type "Legacy")(uri "${KIPRJMOD}/Lib/Lib/MAX6675.lib")(options "")(descr ""))
+  (lib (name "CP2102-GM")(type "Legacy")(uri "${KIPRJMOD}/Lib/Lib/CP2102-GM.lib")(options "")(descr ""))
+  (lib (name "burner-rescue")(type "Legacy")(uri "${KIPRJMOD}/burner-rescue.lib")(options "")(descr ""))
 )
